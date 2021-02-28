@@ -1,0 +1,80 @@
+extends layout/main
+
+block contents
+    .home-wrapper
+        .home
+            .main-left
+                .main-left__header
+                    .main-left__header-select
+                        select(name="numbers")
+                            option(value="30개") 30개
+                            option(value="40개") 40개
+                            option(value="50개") 50개
+                    .main-left__header-posting 
+                        a(href="/board/create")
+                            button 글쓰기
+
+                .main-left__post
+                    table(class="posting-container")
+                        thead
+                            tr(class="posting-list_header")
+                                th(class="posting-list_header_num") 번호
+                                th(class="posting-list_header_title") 제목
+                                th(class="posting-list_header_writer") 작성자
+                                th(class="posting-list_header_date") 작성일
+                                th(class="posting-list_header_view") 조회수
+
+                        tbody
+                            each items in dataList
+                                tr(class="posting-list")
+                                    td(class="posting-list_num")=items.sequence
+                                    td(class="posting-list_title")     
+                                        a(href=`/board/${items.id}`)=items.title
+                                    td(class="posting-list_writer")=items.creator.nickname
+                                    td(class="posting-list_date")=`${items.createdAt.getFullYear()}.${items.createdAt.getMonth()+1 < 10 ? `0${items.createdAt.getMonth()+1}` : items.createdAt.getMonth()+1}.${items.createdAt.getDate()+1 < 10 ? `0${items.createdAt.getDate()+1}` : items.createdAt.getDate()+1}`
+                                    td(class="posting-list_view")=items.views
+                .main-left__footer
+                    .main-left__footer-pages
+                        <i class="fas fa-chevron-left"></i>
+                        .main-left__footer-pages_wrapper
+                            span 1
+                            span 2
+                            span 3
+                            span 4
+                            span 5
+                            span 6
+                            span 7
+                            span 8
+                            span 9
+                            span 10
+                        <i class="fas fa-chevron-right"></i>
+
+                    .main-left__footer-search
+                        .main-left__footer-search_wrapper
+                            form(action="/search", method="GET")
+                                input(type="text", name="search", maxlength="50")
+                                button(type="submit") <i class="fas fa-search"></i>
+
+            .main-right
+                .main-right__login
+                    a(href="/login")
+                        button(class="main-right__login-btn") 로그인하기
+                    .main-right__login-signupFind
+                        a(href="/signup") 회원가입
+                        a(href="#") 아이디/비밀번호찾기
+
+                .main-right__notice
+                    .main-right__notice-title
+                        a(href="#") 공지사항
+                    div
+                        a(href="#") 공지1
+                    div
+                        a(href="#") 공지2
+                    div
+                        a(href="#") 공지3
+                    div
+                        a(href="#") 공지4
+                    div
+                        a(href="#") 공지5
+
+                .main-right__chart

@@ -1,0 +1,20 @@
+extends layout/main
+
+block contents
+    .board-create_wrapper
+        form(action="#", method="POST")
+            .borad-create__header
+                .create-category_select
+                    select(name="category")
+                        option(value="0") 자유게시판
+                        option(value="1") 뉴스게시판
+                        option(value="2") 코인게시판
+                        option(value="3") 손익인증게시판
+                .create-title
+                    input(placeholder="제목", name="title" required maxlength="20")
+            .borad-create__description
+                textarea(name="description", cols="30", rows="10" placeholder="내용을 입력하세요." minlength="3")
+            .board-create_footer
+                button(type="submit") 등록
+        div(class="board-create_footer2")
+            input(type="button" value="취소" onclick="history.back(-1)" class="board-create_footer2-btn") 

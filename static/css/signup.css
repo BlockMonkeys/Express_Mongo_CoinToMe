@@ -1,0 +1,69 @@
+.signup-container{
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.signup-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-container_column:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup-container_box{
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.signup_ex{
+    font-size: var(--default-font);
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 2px;
+}
+
+.signup-nickName,
+.signup-id,
+.signup-pw,
+.signup-pwCheck{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    width: 200px;
+}
+
+.signup-input{
+    border: none;
+    border: var(--border);
+    font-size: 14px;
+    width: 400px; height: 30px;
+}
+
+.signup-input:focus{
+    outline: none;
+}
+
+.signup-btn{
+    width: 60px; height: 35px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.signup-btn_container{
+    width: 1100px;
+    position: relative;
+}
+
+.signup-btn_cancel{
+    background-color: gray;
+    position: absolute;
+    right: 330px;
+    bottom: 0.2px;
+}

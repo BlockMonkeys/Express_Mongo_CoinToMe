@@ -1,0 +1,19 @@
+extends layout/main_nohead
+
+block contents
+    .login-container
+        .login-header
+            .login-header_logo
+                a(href="/")
+                    <i class="fab fa-contao fa-2x"></i>
+                    div Coin to me
+        
+        .login-body
+            form(action="/login", method="POST")
+                input(type="text" name="email" required placeholder="Email")
+                input(type="password" name="password" required placeholder="Password")
+                button(type="submit" value="로그인 하기") 로그인
+            //- div
+            //-     a(href="#") 아이디/비밀번호를 잊어버리셨습니까?
+            .login-body_signup
+                a(href="/signup") 아직 코인투미 회원이 아니신가요?

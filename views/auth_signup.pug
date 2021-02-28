@@ -1,0 +1,35 @@
+extends layout/main
+
+block contents
+    .signup-container
+        form(action="/signup", method="POST")
+            .signup-container_column
+                .signup-container_box
+                    .signup-container_box_column
+                        .signup-nickName 별명 만들기
+                    .signup-container_box_column
+                        input(class="signup-input" name="nickname" type="text" required placeholder="별명을 입력해 주세요." minlength="2" maxlength="10")
+                        .signup_ex 2~10자의 별명을 입력해 주세요.(띄어쓰기는 사용할 수 없습니다.)
+                .signup-container_box
+                    .signup-container_box_column
+                        .signup-id 이메일 입력
+                    .signup-container_box_column
+                        input(class="signup-input" name="email" type="email" required placeholder="이메일을 입력해 주세요." minlength="2" maxlength="40")
+                        .signup_ex 5~20자의 아이디를 영문과 숫자로 입력해 주세요.
+                .signup-container_box
+                    .signup-container_box_column
+                        .signup-pw 비밀번호 입력
+                    .signup-container_box_column
+                        input(class="signup-input" name="password" type="password" required placeholder="비밀번호를 입력해 주세요." minlength="10")
+                        .signup_ex 10글자 이상의 비밀번호를 입력해주세요.
+                .signup-container_box
+                    .signup-container_box_column
+                        .signup-pwCheck 비밀번호 확인
+                    .signup-container_box_column
+                        input(class="signup-input" name="verifyPassword" type="password" required placeholder="비밀번호를 입력해 주세요.")
+                        .signup_ex 비밀번호를 한 번 더 입력해주세요.
+            .signup-container_column
+                button(class="signup-btn" type="submit" value="등록") 가입
+
+        div(class="signup-btn_container")
+            input(class="signup-btn signup-btn_cancel" type="button" value="취소" onclick="history.back(-1)") 

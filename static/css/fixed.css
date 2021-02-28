@@ -1,0 +1,83 @@
+.main-right{
+    position: relative;
+}
+
+.main-right__login{
+    background-color: black;
+    width: 310px; height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-right__login a{
+    text-decoration: none;
+}
+
+.main-right__login-btn{
+    background-color: white;
+    width: 280px; height: 65px;
+    margin-top: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-right__login-btn:hover{
+    cursor: pointer;
+}
+
+.main-right__login-btn:focus{
+    outline: none;
+}
+
+.main-right__login-signupFind{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: var(--default-font);
+}
+
+.main-right__login-signupFind a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-right__login-signupFind a:visited{
+    color: white;
+}
+
+
+.main-right__notice{
+    width: 310px; height: 210px;
+    border: var(--border);
+    margin-top: 20px;
+    font-size: var(--default-font);
+}
+
+.main-right__notice div{
+    margin: 18px 15px;
+}
+
+.main-right__notice div a{
+    text-decoration: none;
+}
+
+.main-right__notice-title{
+    font-size: var(--title-font);
+}
+
+
+
+.main-right__chart{
+    width: 310px;
+    border: var(--border);
+    margin-top: 20px;
+}
+
+.main-right__chart{
+    height: 465px;
+}

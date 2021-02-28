@@ -1,0 +1,24 @@
+header.header
+    .header-component
+        .header__container
+            a(href="/")
+                .header__logo
+                    <i class="fab fa-contao fa-2x"></i>
+
+                .header__title Coin to me
+        
+        .header__title-search
+            form(action="/search", method="GET")
+                input(type="text", name="search", maxlength="50")
+                button(type="submit") <i class="fas fa-search"></i>
+
+    .header__status-bar
+        .header__status-bar-wrapper
+            .header__status-bar__menu 
+                a(href="/board/news") 뉴스
+            .header__status-bar__menu 
+                a(href="/board/free") 자유게시판
+            .header__status-bar__menu
+                a(href="/board/coin") 코인게시판
+            .header__status-bar__menu
+                a(href="/board/pl") 손익인증게시판

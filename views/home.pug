@@ -1,7 +1,156 @@
-doctype html
-html
-    head
-        title PAGETITLE | SITENAME
-        link(rel="stylesheet", href="/static/css/main.css")
-    body
-        span CHANGE
+extends layout/main
+
+block contents
+    .home-wrapper
+        .home
+            .main-left
+                .main-left__news
+                    .main-left__news-title 뉴스
+                    .main-left__news-list
+                        .main-left__news__column
+                            div 
+                                img(src="#")
+                            .main-left__news__title 뉴스 제목1
+                            .main-left__news__content 뉴스 내용입니다.
+                            .main-left__news__content 뉴스 내용은 두줄입니다.
+                        
+                        .main-left__news__column
+                            .main-left__news__list
+                                .main-left__news__list-title 뉴스 제목
+                                .main-left__news__list-data
+                                    .main-left__news__list-writer 작성자
+                                    .main-left__news__list-date 2021-01-28
+                            .main-left__news__list
+                                .main-left__news__list-title 뉴스 제목
+                                .main-left__news__list-data
+                                    .main-left__news__list-writer 작성자
+                                    .main-left__news__list-date 2021-01-28
+                            .main-left__news__list
+                                .main-left__news__list-title 뉴스 제목
+                                .main-left__news__list-data
+                                    .main-left__news__list-writer 작성자
+                                    .main-left__news__list-date 2021-01-28
+                            .main-left__news__list
+                                .main-left__news__list-title 뉴스 제목
+                                .main-left__news__list-data
+                                    .main-left__news__list-writer 작성자
+                                    .main-left__news__list-date 2021-01-28
+                            .main-left__news__list
+                                .main-left__news__list-title 뉴스 제목
+                                .main-left__news__list-data
+                                    .main-left__news__list-writer 작성자
+                                    .main-left__news__list-date 2021-01-28
+                .main-left__link
+                    img(src="#")
+                    img(src="#")
+                    img(src="#")
+                    img(src="#")
+
+                .main-left__post
+                    .main-left__post-PL
+                        .main-left__post-PL-title 손익인증게시판
+                        .main-left__post-PL-list
+                            .main-left__post-PL-list-data
+                                div 손익인증게시글1
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 손익인증게시글2
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 손익인증게시글3
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 손익인증게시글4
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 손익인증게시글5
+                                div 덧글수
+
+                    .main-left__post-hot
+                        .main-left__post-hot-title 인기 게시글
+                        .main-left__post-hot-list
+                            .main-left__post-hot-list-data
+                                div 인기게시글1
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 인기게시글2
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 인기게시글3
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 인기게시글4
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 인기게시글5
+                                div 덧글수
+                .main-left__post
+                    .main-left__post-PL
+                        .main-left__post-PL-title 자유게시판
+                        .main-left__post-PL-list
+                            .main-left__post-PL-list-data
+                                div 자유게시글1
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 자유게시글2
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 자유게시글3
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 자유게시글4
+                                div 덧글수
+                            .main-left__post-PL-list-data
+                                div 자유게시글5
+                                div 덧글수
+
+                    .main-left__post-hot
+                        .main-left__post-hot-title 뭐하지 게시글
+                        .main-left__post-hot-list
+                            .main-left__post-hot-list-data
+                                div 뭐하지게시글1
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 뭐하지게시글2
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 뭐하지게시글3
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 뭐하지게시글4
+                                div 덧글수
+                            .main-left__post-hot-list-data
+                                div 뭐하지게시글5
+                                div 덧글수
+
+                .main-left__banner
+
+            .main-right
+                .main-right__login
+                    a(href="/login")
+                        if !loggedUser
+                            a(href="/login")
+                                button(class="main-right__login-btn") 로그인하기TEST
+                        else
+                            a(href="/logout")
+                                button(class="main-right__login-btn") 로그아웃하기TEST
+                        
+                    .main-right__login-signupFind
+                        a(href="/signup") 회원가입
+                        a(href="#") 아이디/비밀번호찾기
+
+                .main-right__notice
+                    .main-right__notice-title
+                        a(href="#") 공지사항
+                    div
+                        a(href="#") 공지1
+                    div
+                        a(href="#") 공지2
+                    div
+                        a(href="#") 공지3
+                    div
+                        a(href="#") 공지4
+                    div
+                        a(href="#") 공지5
+
+                .main-right__chart

@@ -1,0 +1,53 @@
+extends layout/main
+
+block contents
+    .home-wrapper
+        .home
+            .main-left
+                .board-header
+                    .board_title=dataList.title
+                .board-header_under
+                    .board-header_under-column
+                        .board_creator=dataList.creator.nickname
+                        - var year = dataList.createdAt.getFullYear()
+                        - var month = dataList.createdAt.getMonth()+1
+                        - var date = dataList.createdAt.getDate()
+                        - var hour = dataList.createdAt.getHours()
+                        - var min = dataList.createdAt.getMinutes()
+                        .board_date=`${year}.${month < 10 ? `0${month}` : month}.${date < 10 ? `0${date}` : date}.${hour < 10 ? `0${hour}` : hour}:${min < 10 ? `0${min}` : min}`
+                    .board-header_under-column
+                        span 조회수
+                        .board_view=dataList.views
+
+                .board_description
+                    p=dataList.description
+                    .board_description-btn
+                        a(href=`/board/${dataList.id}/delete`)
+                            button(class="board_btn-delete") 삭제
+                        a(href=`/board/${dataList.id}/edit`)
+                            button(class="board_btn-edit") 수정
+
+            .main-right
+                .main-right__login
+                    a(href="/login")
+                        button(class="main-right__login-btn") 로그인하기
+                    .main-right__login-signupFind
+                        a(href="#") 회원가입
+                        a(href="#") 아이디/비밀번호찾기
+
+                .main-right__notice
+                    .main-right__notice-title
+                        a(href="#") 공지사항
+                    div
+                        a(href="#") 공지1
+                    div
+                        a(href="#") 공지2
+                    div
+                        a(href="#") 공지3
+                    div
+                        a(href="#") 공지4
+                    div
+                        a(href="#") 공지5
+
+                .main-right__chart
+

@@ -1,0 +1,82 @@
+    .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-component{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.header__container a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.header__logo{
+    font-size: 40px;
+    margin-top: -20px;
+}
+
+.header__title{
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2px;
+    margin-left: 25px;
+}
+
+.header__title-search form{
+    width: 550px; height: 45px;
+    margin-right: 220px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title-search input{
+    width: 550px; height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.header__title-search input:focus{
+    outline: none;
+    background-color: none;
+}
+
+.header__title-search input,
+.header__title-search button{
+    border: none;
+}
+
+.header__title-search button{
+    color: white;
+    background-color: black;
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+.header__status-bar{
+    border: var(--main-border);
+    border-left: none; border-right: none;
+    padding: 15px 0px;
+    margin-top: 30px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.header__status-bar-wrapper{
+    width: 1100px;
+    display: flex;
+}
+
+.header__status-bar__menu a{
+    margin-right: 60px;
+    text-decoration: none;
+}

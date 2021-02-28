@@ -1,0 +1,117 @@
+.main-left__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.main-left__header-select select{
+    padding: 5px 10px;
+    font-size: var(--default-font);
+}
+
+.main-left__header-posting button{
+    border: var(--border);
+    background-color: white;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-left: 15px;
+    font-size: var(--default-font);
+}
+
+.posting-container{
+    width: 100%;
+}
+
+.posting-list_header{
+    border: var(--main-border);
+    border-left: none; border-right: none;
+    margin-bottom: 100px;
+}
+
+.posting-list_header th{
+    padding: 10px 0;
+    font-size: var(--default-font);
+}
+
+.posting-list_header_writer,
+.posting-list_header_num{
+    width: 100px;
+}
+
+.posting-list_header_date,
+.posting-list_header_view{
+    width: 50px;
+}
+
+.posting-list{
+    text-align: center;
+    font-size: var(--default-font);
+}
+
+.posting-list_title{
+    text-align: start;
+}
+
+.posting-list_title a{
+    text-decoration: none;
+    color: black;
+}
+
+.posting-list td{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.posting-list_date{
+    font-size: 10px;
+}
+
+.main-left__footer-pages{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 80px;
+}
+
+.main-left__footer-pages_wrapper span{
+    margin: 0 10px;
+}
+
+.main-left__footer-pages_wrapper span:hover,
+.main-left__footer-pages i:hover{
+    cursor: pointer;
+}
+
+.main-left__footer-search{
+    display: flex;
+    justify-content: center;
+}
+
+.main-left__footer-search_wrapper form{
+    width: 350px; height: 30px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.main-left__footer-search_wrapper input{
+    width: 350px; height: 25px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.main-left__footer-search_wrapper input:focus{
+    outline: none;
+    background-color: none;
+}
+
+.main-left__footer-search_wrapper input,
+.main-left__footer-search_wrapper button{
+    border: none;
+}
+
+.main-left__footer-search_wrapper button{
+    color: white;
+    background-color: black;
+    padding: 0px 10px;
+    font-size: 14px;
+}

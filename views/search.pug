@@ -1,0 +1,8 @@
+extends layout/main
+
+block contents
+    .searched
+        each items in searchedResult
+            h1=items.title
+            h3=items.description
+            h5=items.createdAt
